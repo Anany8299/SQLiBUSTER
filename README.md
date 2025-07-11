@@ -4,12 +4,19 @@ Welcome to SQLiBUSTER! 🎉 A powerful Python-based tool for discovering subdoma
 Features 🌟
 
 Subdomain Enumeration 🔎: Find subdomains with tools like assetfinder, sublist3r, dnscan, findomain, subfinder, gobuster, and massdns.
+
 DNS Validation ✅: Ensure subdomains resolve correctly via DNS checks.
+
 Live Subdomain Checking 🌐: Identify live subdomains with HTTP status 200 using httpx.
+
 URL Enumeration 🔗: Gather URLs from live subdomains with gau, waybackurls, and hakrawler.
+
 SQL Injection Scanning 💉: Scan for SQL vulnerabilities using sqlmap, with pre-filtering by gf for efficiency.
+
 Verbose Output 📢: Detailed progress and error logs for easy debugging.
+
 File-Based Workflow 📁: Save and load results for seamless integration into other tools.
+
 
 Prerequisites 🛠️
 Before diving in, ensure you have the following ready:
