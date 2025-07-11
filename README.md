@@ -1,6 +1,7 @@
 # SQLiBUSTER
 SQLiBUSTER 🚀🔍
 Welcome to SQLiBUSTER! 🎉 A powerful Python-based tool for discovering subdomains, checking live subdomains, enumerating URLs, and scanning for SQL injection vulnerabilities. It’s your all-in-one solution for web application security testing! 🛡️ Use responsibly and only on authorized systems! ⚠️
+
 Features 🌟
 
 Subdomain Enumeration 🔎: Find subdomains with tools like assetfinder, sublist3r, dnscan, findomain, subfinder, gobuster, and massdns.
@@ -22,69 +23,102 @@ Prerequisites 🛠️
 Before diving in, ensure you have the following ready:
 System Dependencies
 
+
 Python 3.8+ 🐍
 Install required Python packages:pip install termcolor
 
 
+
 Required tools (must be in PATH or specified paths):
 assetfinder 🕵️‍♂️
+
 sublist3r 🔍
+
 dnscan 🌐
+
 findomain 🚀
+
 subfinder 🔎
+
 gobuster 💥
+
 massdns 📡
+
 httpx 🌍
+
 gau 🔗
+
 waybackurls 📜
+
 hakrawler 🕸️
+
 sqlmap 💉
+
 gf (with sqli.json in ~/.gf/) 📝
 
 
 
 Configuration Files
 
+
 A wordlist for subdomain enumeration (e.g., /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt) 📜
+
 A resolver file for massdns (e.g., resolvers.txt with DNS resolvers) 🌐
 
 Installation 📦
 
 Clone the repo:git clone https://github.com/yourusername/SQLiBUSTER.git
+
 cd SQLiBUSTER
 
-
-Install Python dependencies:pip install -r requirements.txt
 
 
 Install required tools:
 On Linux (e.g., Kali), use package managers or tool-specific guides:sudo apt install assetfinder gobuster
+
 go install github.com/hakluke/hakrawler@latest
+
 go install github.com/tomnomnom/waybackurls@latest
+
 go install github.com/tomnomnom/gf@latest
+
 pip install sqlmap
 
 
 
 
 Ensure sqli.json is in ~/.gf/ for gf filtering. Copy it from the gf tool’s pattern directory or create a custom one for SQLi patterns. 📝
+
 Verify tools are in PATH:which assetfinder sublist3r dnscan findomain subfinder gobuster massdns httpx gau waybackurls hakrawler sqlmap gf
 
 
 
 Usage 🎮
+
 Run the full pipeline with main.py or use individual modules for specific tasks.
+
 Full Pipeline
+
 Edit main.py to configure your target:
+
 domain = "example.com"  # Your target domain 🌐
+
 wordlist = "/path/to/wordlist.txt"  # Subdomain wordlist 📜
+
 resolvers = "resolvers.txt"  # DNS resolvers 🌍
+
 subdomain_file = "subd.txt"  # Subdomain output 📁
+
 alive_file = "alive_subdomains.txt"  # Live subdomains 📁
+
 url_file = "urls.txt"  # URLs output 📁
+
 sql_vuln_file = "sql_vulnerabilities.txt"  # SQL vuln output 📁
+
 validate_dns = True  # Enable DNS validation ✅
+
 verbose = True  # Enable verbose output 📢
+
 
 Run:
 python3 main.py
